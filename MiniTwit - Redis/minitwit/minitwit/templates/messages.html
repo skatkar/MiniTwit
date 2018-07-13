@@ -1,0 +1,14 @@
+{% if messages %}
+
+   <ul id=”messages”>
+      {% for message in messages %}
+         <li>
+            <div class=”text”>
+               <a>{{message['text']|forceescape}}</a>
+            </div>
+         </li>
+      {% endfor %}
+   </ul>
+{% else %}
+   <p>Messages not available :(</p>
+{% endif %}

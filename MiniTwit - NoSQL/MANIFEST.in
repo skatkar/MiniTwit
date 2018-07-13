@@ -1,0 +1,4 @@
+graft mini_api/templates
+graft mini_api/static
+include mini_api/schema_cassandra.cql
+include mini_api/population.sql

@@ -1,0 +1,3 @@
+web1: flask run -p 5001
+web2: flask run -p 5004
+web3: flask run -p 5005

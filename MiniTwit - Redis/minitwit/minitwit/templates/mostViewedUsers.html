@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}
+   Top viewed users
+{% endblock %}
+{% block body %}
+  <h2>{{ self.title() }}</h2>
+  <ul class="users">
+  {% for name,score in users %}
+    <li><p>
+      <strong><a href="{{ url_for('user_timeline', username=name)}}">{{ name }}</a></strong>
+      <small>&mdash; {{ '%d' | format(score) }}</small>
+    </li>
+      
+  {% else %}
+	  <li><em>There are no users so far.</em></li>
+  {% endfor %}
+  </ul>
+{% endblock %}

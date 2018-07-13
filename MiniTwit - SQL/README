@@ -1,0 +1,46 @@
+REST APIs for minitwit application
+
+    ~ What is this application about?
+
+      A SQLite and Flask powered twitter API clone with application level sharding.
+	  
+	  There are three different shards of the database named :
+		mini_api00.db
+		mini_api01.db
+		mini_api02.db
+	
+	  The REST API will select the appropriate shard and will communicate with it based on the user id of the user.
+	  So, the usrid acts as the sharding key.
+
+    ~ How do I use it?
+
+      1. edit the configuration in the minitwit.py file or
+         export an MINITWIT_SETTINGS environment variable
+         pointing to a configuration file.
+
+      2. install the app from the root of the project directory
+
+         pip install --editable .
+
+      3. install BasicAuth from the root of the project directory
+	  
+	  	 pip install Flask-BasicAuth
+	  
+	  4. tell flask about the right application:
+
+         export FLASK_APP=mini_api
+
+      5. fire up a shell and run this:
+
+         flask initdb
+	
+	  6. fire up a shell and run this to populate the database:
+
+         flask populatedb
+	  
+	  7. now you can run mini_api:
+
+         flask run
+      8  To configure on different port say 3000
+	      
+		 flask run -h localhost -p 3000

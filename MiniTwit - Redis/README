@@ -13,27 +13,31 @@
 
     ~ How do I use it?
 
-      1. edit the configuration in the minitwit.py file or
-         export an MINITWIT_SETTINGS environment variable
-         pointing to a configuration file.
+      1. Open the two terminals. One for MiniTwit and another for Mini_API. Execute these commands first
+		 
+         cd minitwit
+         cd mini_api
+		 
 
-      2. install the app from the root of the project directory
+      2. install the app from the root of the project directory. Applicable to both the terminals.
 
          pip install --editable .
 
       3. tell flask about the right application:
 
          export FLASK_APP=minitwit
+		 
+		 export FLASK_APP=mini_api
 
-      4. fire up a shell and run this:
+      4. In the mini_api terminal run this:
 
          flask initdb
 		 
-      5. fire up a shell and run this to populate the database:
+      5. Also in the same terminal run this to populate the database :
 
          flask populatedb
 	  
-      6. now you can run mini_api:
+      6. Now you can run mini_api:
 
          flask run
 		 

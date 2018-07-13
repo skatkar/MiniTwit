@@ -7,9 +7,9 @@
       A SQLite and Flask powered twitter clone. 
 	  This application stores frequently used data in the cache server - Redis so as to avoid the database calls.
 	  
-	  Right now the data stored in the cache server:
-		1. Number of followers of the every user. This helps to identify the most followed users.
-		2. Number of times the profile of the user viewed. This helps to identify the most viewed users.
+    Right now the data stored in the cache server:
+      1. Number of followers of the every user. This helps to identify the most followed users.
+      2. Number of times the profile of the user viewed. This helps to identify the most viewed users.
 
     ~ How do I use it?
 
@@ -29,20 +29,20 @@
 
          flask initdb
 		 
-	  5. fire up a shell and run this to populate the database:
+      5. fire up a shell and run this to populate the database:
 
          flask populatedb
 	  
-	  6. now you can run mini_api:
+      6. now you can run mini_api:
 
          flask run
 		 
       7. The application and REST API should be running on different ports
 	      
-		 The port for REST API should be 8080 as the Ngnx setup will lookup the service at this port.
-		 
-		 Whereas, the application can be run at any port. Suppose the port is 3000 then execute
-			flask run -h localhost -p 3000
+        The port for REST API should be 8080 as the Ngnx setup will lookup the service at this port.
+ 
+        Whereas, the application can be run at any port. Suppose the port is 3000 then execute
+           flask run -h localhost -p 3000
 
      
 

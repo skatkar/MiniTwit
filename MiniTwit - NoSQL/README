@@ -18,7 +18,7 @@ REST APIs for minitwit application
 	  
 	  	 pip install Flask-BasicAuth
 	  
-	  4. tell flask about the right application:
+      4. tell flask about the right application:
 
          export FLASK_APP=mini_api
 
@@ -26,11 +26,11 @@ REST APIs for minitwit application
 
          flask initdb
 	
-	  6. fire up a shell and run this to populate the database:
+      6. fire up a shell and run this to populate the database:
 
          flask populatedb
 	  
-	  7. now you can run mini_api:
+      7. now you can run mini_api:
 
          flask run
       8  To configure on different port say 3000
